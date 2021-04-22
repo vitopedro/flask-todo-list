@@ -1,0 +1,15 @@
+- activate environment
+
+.\env\Scripts\activate
+
+- create database
+
+python
+
+from app import db
+
+db.create_all()
+
+- freeze requirements
+
+pip3 freeze > requirements.txt
