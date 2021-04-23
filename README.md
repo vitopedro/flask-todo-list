@@ -6,7 +6,7 @@ The application was build using this [video](https://www.youtube.com/watch?v=Z1R
 
 # Pre requisites
 
-To lauch the application only docker and docjer compose is required
+To launch the application only docker and docker compose is required
 
 - [install on linux](https://docs.docker.com/compose/install/)
 - [install on windows](https://docs.docker.com/docker-for-windows/install/)
@@ -16,14 +16,14 @@ To develop, python and pip should be installed, the project uses python version 
 - [install on linux](https://docs.python-guide.org/starting/install3/linux/)
 - [install on windows](https://www.python.org/downloads/windows/)
 
-# Lauch environment
+# Launch environment
 
 ```
 https://github.com/vitopedro/flask-todo-list
 docker-compose up
 ```
 
-two containers will be lauched:
+two containers will be launched:
 
 - **mariadb** contains a simple mysql database with the databse `todo` already created. It uses the image [bitnami/mariadb](https://hub.docker.com/r/bitnami/mariadb)
 
