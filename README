@@ -1,3 +1,7 @@
+- create environment
+
+virtualenv env
+
 - activate environment
 
 .\env\Scripts\activate

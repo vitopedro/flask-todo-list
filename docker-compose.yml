@@ -1,0 +1,27 @@
+version: "2"
+services:
+  #Database Container
+  mariadb:
+    image: bitnami/mariadb:10.5
+    ports:
+      - "3306:3306"
+    environment:
+      ALLOW_EMPTY_PASSWORD: 'yes'
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: todo
+      MARIADB_USER: homestead
+      MARIADB_PASSWORD: secret
+
+  #APP
+  app:
+    tty: true
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    depends_on:
+      - mariadb
+    entrypoint: ["/app/wait-for-it.sh", "localhost:3306", "-t", "10", "--", "/app/entrypoint.sh"]
+    ports:
+      - 5000:5000
+    volumes:
+      - ./:/app
